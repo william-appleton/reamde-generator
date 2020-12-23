@@ -7,14 +7,14 @@ const inquirer = require("inquirer");
 // array of questions for user
 const questions = [
   {
-      type: "input",
-      name: "github",
-      message: "What's your username for GitHub"
+    type: "input",
+    name: "github",
+    message: "What's your username for GitHub"
   },
   {
-      type: "input",
-      name: "email",
-      message: "What's your email?"
+    type: "input",
+    name: "email",
+    message: "What's your email?"
   },
   {
     type: "input",
@@ -65,6 +65,7 @@ function writeFile(fileName, data) {
 function init() {
   inquirer.prompt(questions)
   .then((inquirerResponses) => {
+    console.log("Writing data to file!")
     writeFile("README.md", generator({...inquirerResponses}));
 })
 }
@@ -73,43 +74,43 @@ function init() {
 init();
 
 function generator(data) {
-    return `# ${data.title}
+    return `# ${data.project}
 
-    ## Description
+## Description
 
-    ${data.description}
+${data.description}
 
-    ## Table of Contents 
+## Table of Contents 
 
-    * [Installation](#installation)
+* [Installation](#installation)
 
-    * [Usage](#usage)
+* [Usage](#usage)
 
-    * [Contributing](#contributing)
+* [Contributing](#contributing)
 
-    * [Tests](#tests)
+* [Tests](#tests)
 
-    * [Questions](#questions)
+* [Questions](#questions)
 
-    ## Installation
+## Installation
 
-    Run the following command to install the required dependencies: ${data.installation}
+Run the following command to install the required dependencies: ${data.installation}
 
-    ## Usage
+## Usage
 
-    ${data.usage}
+${data.usage}
 
-    ## Contributing
+## Contributing
 
-    ${data.contributing}
+${data.contributing}
 
-    ## Tests
+## Tests
 
-    For tests, run the following command: ${data.test}
+For tests, run the following command: ${data.test}
 
-    ## Questions
+## Questions
 
-    I can answer any questions at ${data.email}, and more of my work can be seen at: [${data.github}](https://github.com/${data.github}/). 
-   
-    `;
+I can answer any questions at ${data.email}, and more of my work can be seen at: [${data.github}](https://github.com/${data.github}/). 
+
+`;
 }
