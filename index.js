@@ -1,3 +1,9 @@
+
+const fs = require("fs");
+const path = require("path");
+const inquirer = require("inquirer");
+
+
 // array of questions for user
 const questions = [
 
