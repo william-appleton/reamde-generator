@@ -30,6 +30,6 @@ For tests, run the following command: npm test
 
 I can answer any questions at william.appleton02@gmail.com, and more of my work can be seen at: [william-appleton](https://github.com/william-appleton/). 
 
-A video of the application can be seen [here](https://drive.google.com/file/d/1fugk8663JmNd-eHXz2On71mz-L-pudby/view)
+A video of the application can be seen [here](https://drive.google.com/file/d/1fugk8663JmNd-eHXz2On71mz-L-pudby/view).
 
     
